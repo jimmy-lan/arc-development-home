@@ -3,9 +3,10 @@ import { Header } from "./ui";
 
 function App() {
   return (
-    <div className="App">
-      <Header></Header>Hello
-    </div>
+    <>
+      <Header></Header>
+      Hello
+    </>
   );
 }
 
