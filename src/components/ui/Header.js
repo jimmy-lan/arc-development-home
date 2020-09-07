@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar } from "@material-ui/core";
+import { AppBar, Toolbar, Tabs, Tab } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 
 import { ElevationScroll } from "../common";
@@ -8,9 +8,10 @@ import logo from "../../assets/images/logo.png";
 const useStyles = makeStyles((theme) => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
+    marginBottom: "2em",
   },
   logo: {
-    height: "7em",
+    height: "6em",
   },
 }));
 
@@ -25,6 +26,13 @@ export default function Header(props) {
       things span horizontally, not stack up vertically. */}
           <Toolbar disableGutters>
             <img alt="Poly Team Logo" className={classes.logo} src={logo} />
+            <Tabs>
+              <Tab label="home" />
+              <Tab label="Services" />
+              <Tab label="The Revolution" />
+              <Tab label="About Us" />
+              <Tab label="Contact Us" />
+            </Tabs>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
